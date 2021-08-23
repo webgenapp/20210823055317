@@ -1,0 +1,14 @@
+{
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "description": "e web platform",
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "image": "heroku/nodejs",
+  "name": "e",
+  "scripts": {
+    "postdeploy": "NODE_TLS_REJECT_UNAUTHORIZED=0 npx sequelize-cli db:migrate"
+  }
+}
